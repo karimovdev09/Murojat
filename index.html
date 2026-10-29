@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="collumns mt-6">
+            <div class="collumn">
+                <div class="box">
+                    <p class="has-text-centered">Assalomu aleykum. Siz bu sayt orqali 11-maktap direktory O.Bayliev ga murojat qilishingiz mumkin.</p>
+                    <p class="has-text-centered">Murojatingiz directorga yetip boradi lekin siz yozganingiz bilinmaydi!</p>
+                </div>
+            </div>
+        </div>
+        <div class="columns mt-2">
+            <div class="column">
+                <div class="box">
+                     <form id="myForm" action="https://formspree.io/f/xwlezdyg">
+                        <div class="failed">
+                        <label for=""></label>
+                        <textarea name="f" id="f" placeholder="Murojatingizni qoldiring" class="textarea"></textarea>
+                    </div>
+                    <div class="failed">
+                        <button class="button is-fullwidth mt-4 is-success ">Yuborish</button>
+                    </div>
+                     </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="box has-text-centered" style="margin-top: 400px; ;">© 2026 Shanur Karimov. Barcha huquqlar himoyalangan.</div>
+    </div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const formData = new FormData(form);
+            const messageDiv = document.getElementById('message');
+            const submitButton = form.querySelector('button[type="submit"]')
+
+            submitButton.disabled = true;
+            submitButton.textContext = 'Yuborilmoqda....';
+
+            try {
+                const response = await fetch(form.action, {
+                    
+                })
+            }
+        })
+    </script>
+</body>
+</html>

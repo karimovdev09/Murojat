@@ -17,9 +17,9 @@
         <div class="columns mt-6">
             <div class="column">
                 <div class="box">
-                    <p class="has-text-centered">
+                    <p class="has-text-centered ">
                         Assalomu alaykum. Siz bu sayt orqali
-                        11-maktab direktori O. Bayliyevga murojaat
+                        11-maktab direktori <span class="has-text-white">O.Bayliyev ga</span> murojaat
                         qilishingiz mumkin.
                     </p>
 
@@ -42,7 +42,7 @@
                     >
                         <div class="field">
                             <label class="label" for="message">
-                                Murojaatingiz
+                                Murojatingiz
                             </label>
 
                             <div class="control">
@@ -52,13 +52,14 @@
                                     placeholder="Murojaatingizni qoldiring"
                                     class="textarea"
                                     required
+                                    style="color: white;"
                                 ></textarea>
                             </div>
                         </div>
 
                         <button
                             type="submit"
-                            class="button is-fullwidth mt-4 is-success"
+                            class="button is-fullwidth mt-4 " style="color: white; background-color: rgba(11, 211, 11, 0.76); border: 0px;"
                         >
                             Yuborish
                         </button>
@@ -75,8 +76,8 @@
             </div>
         </div>
 
-        <div class="box has-text-centered" style="margin-top: 250px;">
-            © 2026 Shanur Karimov. Barcha huquqlar himoyalangan.
+        <div class="box has-text-centered" style="margin-top: 190px; font-size: 13px;">
+            © 2026 <span class="has-text-white">Shanur Karimov</span>. Barcha huquqlar himoyalangan.
         </div>
 
     </div>
@@ -105,7 +106,7 @@
                 });
 
                 if (!response.ok) {
-                    throw new Error("Xabar yuborilmadi");
+                    alert("Xabar yuborilmadi");
                 }
 
                 alert("✅ Murojaatingiz muvaffaqiyatli yuborildi!");
@@ -113,10 +114,7 @@
                 form.reset();
 
             } catch (error) {
-                messageStatus.className =
-                    "notification is-danger mt-3";
-                messageStatus.textContent =
-                    "Xatolik yuz berdi. Internet va Formspree sozlamalarini tekshiring.";
+                alert("❌️Xatolik yuz berdi.")
             } finally {
                 submitButton.disabled = false;
                 submitButton.textContent = "Yuborish";

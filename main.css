@@ -1,4 +1,4 @@
-/* Telefon uchun */
+
 @media screen and (max-width: 768px) {
     body {
         padding: 10px;
@@ -20,4 +20,22 @@
     .button {
         width: 100%;
     }
+}
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
 }

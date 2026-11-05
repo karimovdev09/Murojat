@@ -1,0 +1,23 @@
+/* Telefon uchun */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .textarea {
+        font-size: 16px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
